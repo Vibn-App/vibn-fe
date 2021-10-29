@@ -5,25 +5,37 @@ import pass from '../../assets/pass-icon.png';
 import msg from '../../assets/msg-user-icon.png';
 import DemoHeader from './DemoHeader';
 import { useParams, Link } from 'react-router-dom';
-import demoUsers from './DemoUsers.js';
+import useDemoUsers from './useDemoUsers';
+// import demoUsers from './DemoUsers.js';
 
-export function findById(arr, idee) {
-  const number = Number(idee);
-  for (const item of arr) {
-    if (item.id === number) return item;
-  }
-  return 'nah bitch';
-}
+// export const fetchDemoUserById = async () => {
+//   const res = await demoUsers.id;
+// console.log('poop', res);
+//   return res;
+// };
+// const [singleTask, setTask] = useState(initialTaskState);
+
+// const fetchSingTask = (id) => {
+//   axios.get(demoUsers, id).then((res) => {
+//     setTask(res.data);
+//   });
+// };
+
+// useEffect(() => {
+//   fetchSingTask(id);
+// }, [id]);
+
+const spinner =
+  'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
 export default function DemoUserDetail() {
-  let farts = [];
-  const { idee } = useParams();
+  const { id } = useParams();
+  const { userObject, loading } = useDemoUsers(id);
 
-  const userObject = findById(demoUsers, demoUsers.id);
-  farts = userObject.map([]);
-  console.log('---shut up bitch----', farts);
+  if (loading)
+    return <img className={styles.spinner} src={spinner} alt="spinner" />;
 
-  const userArtists = userObject.topArtists;
+  console.log('----poop---', userObject);
 
   return (
     <div className={styles.profile_main}>
@@ -32,7 +44,7 @@ export default function DemoUserDetail() {
         <a href={userObject.profileURL} className={styles.profile_link}>
           <img
             className={styles.user_img}
-            alt="user image"
+            alt={userObject.displayName}
             src={userObject.image}
           />
         </a>
@@ -43,7 +55,7 @@ export default function DemoUserDetail() {
         <Link to="/demo-users">
           <img src={pass} className={styles.pass_btn} />
         </Link>
-        <Link to={`/demo-create/${idee}/`}>
+        <Link to={`/demo-create/${id}/`}>
           <img src={msg} className={styles.msg_btn} />
         </Link>
       </section>
@@ -53,8 +65,8 @@ export default function DemoUserDetail() {
 
       <section className={styles.artists_container}>
         <ul className={styles.artists_list}>
-          {userArtists
-            ? userArtists.map((artist) => (
+          {userObject.topArtists
+            ? userObject.topArtists.map((artist) => (
               <li className={styles.artists_item} key={artist.id}>
                 <a href={artist.artistUrl} alt={artist.artistName}>
                   <img

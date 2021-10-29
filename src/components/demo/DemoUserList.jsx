@@ -4,19 +4,9 @@ import styles from '../../styles/userlist.css';
 import { Link } from 'react-router-dom';
 import DemoUserItem from './DemoUserItem';
 import linebreak from '../../assets/linebreak.png';
-import PropTypes from 'prop-types';
 import demoUsers from './DemoUsers';
-// import fetchDemoUsers from './useDemoUsers.js';
-
-export const fetchDemoUsers = async () => {
-  const doods = await demoUsers;
-
-  console.log('---feccin doods---', doods[2]);
-  return doods;
-};
 
 export default function DemoUserList() {
-
   return (
     <div>
       <DemoHeader />
@@ -66,13 +56,3 @@ export default function DemoUserList() {
     </div>
   );
 }
-
-DemoUserList.propTypes = {
-  allUsers: PropTypes.arrayOf(
-    PropTypes.shape({
-      displayName: PropTypes.string,
-      image: PropTypes.string,
-      id: PropTypes.string,
-    })
-  ),
-};
