@@ -107,7 +107,7 @@ const demoUsers = [
     email: 'steve@busey.co',
     profileURL:
       'https://open.spotify.com/show/1w6X7As4rauic2UQEBoJ3O?si=Bc68QGPzRbyngn5krBOSdg',
-    profileImage:
+    image:
       'https://cdn2.newsok.biz/cache/r960-82984c26d6d75dbc514b6fe25a0ccc29.jpg',
     topArtists: [
       {
@@ -158,7 +158,7 @@ const demoUsers = [
     email: 'renaldo@busey.co',
     profileURL:
       'https://open.spotify.com/playlist/37i9dQZF1DX9tPFwDMOaN1?si=c7515e62de2c4b91',
-    profileImage:
+    image:
       'https://www.memesmonkey.com/images/memesmonkey/95/9529743fd87cc4b475d6ba5a49a97ca6.jpeg',
     topArtists: [
       {
@@ -209,8 +209,7 @@ const demoUsers = [
     email: 'jeeves@busey.co',
     profileURL:
       'https://open.spotify.com/album/2AG5Udh8TM6Ww8dRYR3eVy?si=jr-nNQrwSrOTfcCCN6QNPQ',
-    profileImage:
-      'https://st2.depositphotos.com/1032561/7236/i/600/depositphotos_72367653-stock-photo-waiter-holding-an-empty-silver.jpg',
+    image: 'https://lovecatsworld.com/wp-content/uploads/2021/07/image-8.png',
     topArtists: [
       {
         id: '7GN9PivdemQRKjDt4z5Zv8',
@@ -260,7 +259,7 @@ const demoUsers = [
     email: 'amanda@busey.co',
     profileURL:
       'https://open.spotify.com/playlist/6gOJOnsgo0IlXGvswYYFDq?si=0b67400f1f744045',
-    profileImage:
+    image:
       'https://thumbs.dreamstime.com/b/old-smiling-gray-haired-woman-holding-dollar-cash-money-home-old-smiling-gray-haired-woman-100326665.jpg',
     topArtists: [
       {
@@ -315,7 +314,7 @@ export default demoUsers;
 //   email: 'mara@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/user/tdar2zzv9peqiahhdf1liqgoc?si=50a5a5c4aade4db7',
-//   profileImage:
+//   image:
 //     'https://styles.redditmedia.com/t5_2thci/styles/communityIcon_f22vdzw73e071.png',
 //   topArtists: [],
 // },
@@ -325,7 +324,7 @@ export default demoUsers;
 //   email: 'jim@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/playlist/37i9dQZF1DWY1j3jZdCWOQ?si=1a88d181eb6347dc',
-//   profileImage:
+//   image:
 //     'https://www.cashcolorcannabis.com/wp-content/uploads/2018/07/MNAQ4uuc0h.jpg',
 //   topArtists: [],
 // },
@@ -335,7 +334,7 @@ export default demoUsers;
 //   email: 'rashida@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/user/hcb8th13610kpqqt7lwtdwdhz?si=03e862430b06451a',
-//   profileImage:
+//   image:
 //     'https://i.pinimg.com/originals/82/9b/88/829b88b807c40fc5a8a054833366f791.jpg',
 //   topArtists: [],
 // },
@@ -345,7 +344,7 @@ export default demoUsers;
 //   email: 'catrick@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/user/31v5zmkbprzeux3ghbjragrpijrm?si=04837c69c52447bf',
-//   profileImage:
+//   image:
 //     'https://lovecatsworld.com/wp-content/uploads/2021/07/image-8.png',
 // },
 // {
@@ -354,7 +353,7 @@ export default demoUsers;
 //   email: 'renaldo@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/playlist/37i9dQZF1DX9tPFwDMOaN1?si=c7515e62de2c4b91',
-//   profileImage:
+//   image:
 //     'https://www.memesmonkey.com/images/memesmonkey/95/9529743fd87cc4b475d6ba5a49a97ca6.jpeg',
 // },
 // {
@@ -363,7 +362,7 @@ export default demoUsers;
 //   email: 'jeeves@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/album/2AG5Udh8TM6Ww8dRYR3eVy?si=jr-nNQrwSrOTfcCCN6QNPQ',
-//   profileImage:
+//   image:
 //     'https://st2.depositphotos.com/1032561/7236/i/600/depositphotos_72367653-stock-photo-waiter-holding-an-empty-silver.jpg',
 // },
 // {
@@ -372,7 +371,7 @@ export default demoUsers;
 //   email: 'amanda@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/playlist/6gOJOnsgo0IlXGvswYYFDq?si=0b67400f1f744045',
-//   profileImage:
+//   image:
 //     'https://thumbs.dreamstime.com/b/old-smiling-gray-haired-woman-holding-dollar-cash-money-home-old-smiling-gray-haired-woman-100326665.jpg',
 // },
 // {
@@ -381,7 +380,7 @@ export default demoUsers;
 //   email: 'mara@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/user/tdar2zzv9peqiahhdf1liqgoc?si=50a5a5c4aade4db7',
-//   profileImage:
+//   image:
 //     'https://styles.redditmedia.com/t5_2thci/styles/communityIcon_f22vdzw73e071.png',
 // },
 // {
@@ -390,7 +389,7 @@ export default demoUsers;
 //   email: 'jim@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/playlist/37i9dQZF1DWY1j3jZdCWOQ?si=1a88d181eb6347dc',
-//   profileImage:
+//   image:
 //     'https://www.cashcolorcannabis.com/wp-content/uploads/2018/07/MNAQ4uuc0h.jpg',
 // },
 // {
@@ -399,7 +398,7 @@ export default demoUsers;
 //   email: 'rashida@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/user/hcb8th13610kpqqt7lwtdwdhz?si=03e862430b06451a',
-//   profileImage:
+//   image:
 //     'https://i.pinimg.com/originals/82/9b/88/829b88b807c40fc5a8a054833366f791.jpg',
 // },
 // {
@@ -408,6 +407,6 @@ export default demoUsers;
 //   email: 'catrick@busey.co',
 //   profileURL:
 //     'https://open.spotify.com/user/31v5zmkbprzeux3ghbjragrpijrm?si=04837c69c52447bf',
-//   profileImage:
+//   image:
 //     'https://lovecatsworld.com/wp-content/uploads/2021/07/image-8.png',
 // },

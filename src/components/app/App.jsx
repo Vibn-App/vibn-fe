@@ -16,6 +16,7 @@ import DemoConvo2 from '../demo/DemoConvo2';
 import DemoAbout from '../demo/DemoAbout';
 import DemoUserList from '../demo/DemoUserList';
 import DemoUserDetail from '../demo/DemoUserDetail';
+import DemoCreateConvo from '../demo/DemoCreateConvo';
 
 export default function App() {
   return (
@@ -31,44 +32,47 @@ export default function App() {
           <Route exact path="/user/:id/dash">
             <UserProfile />
           </Route>
-          <Route exact path="/demo-profile">
-            <DemoProfile />
-          </Route>
           <Route exact path="/users">
             <UserList />
-          </Route>
-          <Route exact path="/demo-users">
-            <DemoUserList />
           </Route>
           <Route exact path="/users/:id">
             <UserDetail />
           </Route>
-          <Route exact path="/demo-users/:id">
-            <DemoUserDetail />
-          </Route>
-          <Route exact path="/create/:id/">
-            <CreateConvo />
-          </Route>
-          <Route path="/convo/demo/conversations">
-            <DemoConversations />
-          </Route>
           <Route path="/convo/:id/conversations">
             <Conversations />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/demo-about">
-            <DemoAbout />
           </Route>
           <Route exact path="/convo/:id/detail/:convoId">
             <ConvoDetail />
           </Route>
-          <Route exact path="/convo/demo/detail/demo1">
+          <Route exact path="/create/:id/">
+            <CreateConvo />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/demo-profile">
+            <DemoProfile />
+          </Route>
+          <Route exact path="/demo-users">
+            <DemoUserList />
+          </Route>
+          <Route exact path="/demo-users/:id">
+            <DemoUserDetail />
+          </Route>
+          <Route exact path="/demo-create/:id/">
+            <DemoCreateConvo />
+          </Route>
+          <Route path="/demo-convo/conversations">
+            <DemoConversations />
+          </Route>
+          <Route exact path="/demo-convo/detail/demo1">
             <DemoConvo1 />
           </Route>
-          <Route exact path="/convo/demo/detail/demo2">
+          <Route exact path="/demo-convo/detail/demo2">
             <DemoConvo2 />
+          </Route>
+          <Route exact path="/demo-about">
+            <DemoAbout />
           </Route>
         </Switch>
       </BrowserRouter>

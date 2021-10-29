@@ -6,19 +6,24 @@ import msg from '../../assets/msg-user-icon.png';
 import DemoHeader from './DemoHeader';
 import { useParams, Link } from 'react-router-dom';
 import demoUsers from './DemoUsers.js';
-import useLoggedInUser from '../../hooks/useLoggedInUser';
 
-const spinner =
-  'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
+export function findById(arr, idee) {
+  const number = Number(idee);
+  for (const item of arr) {
+    if (item.id === number) return item;
+  }
+  return 'nah bitch';
+}
 
-export default function UserDetail() {
-  const { id } = useParams();
-  const { loading } = useLoggedInUser();
-  const userObject = demoUsers;
-  const userArtists = demoUsers.topArtists;
+export default function DemoUserDetail() {
+  let farts = [];
+  const { idee } = useParams();
 
-  if (loading)
-    return <img className={styles.spinner} src={spinner} alt="spinner" />;
+  const userObject = findById(demoUsers, demoUsers.id);
+  farts = userObject.map([]);
+  console.log('---shut up bitch----', farts);
+
+  const userArtists = userObject.topArtists;
 
   return (
     <div className={styles.profile_main}>
@@ -38,7 +43,7 @@ export default function UserDetail() {
         <Link to="/demo-users">
           <img src={pass} className={styles.pass_btn} />
         </Link>
-        <Link to={`/create/${id}/`}>
+        <Link to={`/demo-create/${idee}/`}>
           <img src={msg} className={styles.msg_btn} />
         </Link>
       </section>

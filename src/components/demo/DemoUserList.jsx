@@ -2,22 +2,20 @@ import React from 'react';
 import DemoHeader from './DemoHeader';
 import styles from '../../styles/userlist.css';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import DemoUserItem from './DemoUserItem';
-import useListOfUsers from '../../hooks/useListOfUsers';
 import linebreak from '../../assets/linebreak.png';
-import demoUsers from './DemoUsers.js';
+import PropTypes from 'prop-types';
+import demoUsers from './DemoUsers';
+// import fetchDemoUsers from './useDemoUsers.js';
 
-const spinner =
-  'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
+export const fetchDemoUsers = async () => {
+  const doods = await demoUsers;
+
+  console.log('---feccin doods---', doods[2]);
+  return doods;
+};
 
 export default function DemoUserList() {
-  const { loading } = useListOfUsers();
-  console.log(demoUsers);
-  const { user } = demoUsers;
-
-  if (loading)
-    return <img className={styles.spinner} src={spinner} alt="spinner" />;
 
   return (
     <div>

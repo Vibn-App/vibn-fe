@@ -37,7 +37,7 @@ export default class DemoHeader extends Component {
             />
           </Link>
           <div className={styles.icon}>
-            <Link to="/convo/demo/conversations">
+            <Link to="/demo-convo/conversations">
               <img className={styles.cvicon} src={cv_icon} />
             </Link>
           </div>

@@ -2,20 +2,11 @@ import React from 'react';
 import styles from '../../styles/profile.css';
 import linebreak from '../../assets/linebreak.png';
 import DemoHeader from './DemoHeader';
-import useLoggedInUser from '../../hooks/useLoggedInUser';
 import logo from '../../assets/spotify-icon.png';
 import demoUsers from './DemoUsers.js';
 
-const spinner =
-  'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
-
 export default function DemoProfile() {
-  const { loading } = useLoggedInUser();
   const artist = demoUsers[1].topArtists;
-
-  if (loading) {
-    return <img className={styles.spinner} src={spinner} alt="spinner" />;
-  }
 
   return (
     <div className={styles.profile_main}>
