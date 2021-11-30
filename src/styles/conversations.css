@@ -66,3 +66,13 @@ body {
   color: var(--b-color);
   text-shadow: 2px 12px 25px var(--j-color);
 }
+
+a {
+  color: var(--i-color);
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--c-color);
+    text-shadow: 2px 12px 25px var(--j-color);
+}
