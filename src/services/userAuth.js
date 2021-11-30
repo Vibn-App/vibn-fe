@@ -1,7 +1,7 @@
-const URL = 'https://vibn.herokuapp.com/api/v1/';
+const URL = 'https://vibn.herokuapp.com/api/v1'; // Can be moved to .env
 
 export const fetchCurrentUser = async () => {
-  const res = await fetch(`${URL}auth/verify`, {
+  const res = await fetch(`${URL}/auth/verify`, {
     credentials: 'include',
     mode: 'cors',
   });
@@ -11,28 +11,28 @@ export const fetchCurrentUser = async () => {
 };
 
 export const fetchAllUsers = async () => {
-  const res = await fetch(`${URL}users`);
+  const res = await fetch(`${URL}/users`);
   const userList = await res.json();
 
   return userList;
 };
 
 export const fetchUserById = async (id) => {
-  const res = await fetch(`${URL}users/${id}`);
+  const res = await fetch(`${URL}/users/${id}`);
   const user = await res.json();
 
   return user;
 };
 
 export const fetchUserArtists = async (id) => {
-  const res = await fetch(`${URL}artists/${id}`);
+  const res = await fetch(`${URL}/artists/${id}`);
   const artistsArray = await res.json();
 
   return artistsArray;
 };
 
 export const postUserArtists = async (payload) => {
-  const res = await fetch('https://vibn.herokuapp.com/api/v1/artists/', {
+  const res = await fetch(`${URL}/artists/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -49,6 +49,7 @@ export const postUserArtists = async (payload) => {
 };
 
 export const logout = async () => {
+  // This route doesn't exist
   const data = await fetch(`${URL}/`).send({
     email: '',
     password: '',

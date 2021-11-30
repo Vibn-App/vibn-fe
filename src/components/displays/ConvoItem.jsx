@@ -7,6 +7,7 @@ import styles from '../../styles/conversations.css';
 const spinner = 'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
 
 export default function ConvoItem({ convo }) {
+  // All of the state management here could go into a custom hook
   const [fromUser, setFromUser] = useState({});
   const [loading, setLoading] = useState(true);
   const currentUserId = localStorage.getItem('CURRENT_USER_ID');

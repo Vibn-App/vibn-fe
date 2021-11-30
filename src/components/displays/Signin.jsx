@@ -9,6 +9,7 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // Did you mean to use `history.push` here?
     window.location.href = 'https://vibn.herokuapp.com/api/v1/auth/login';
   };
 

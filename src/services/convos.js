@@ -1,3 +1,4 @@
+// Consider moving the API URL (https://vibn.herokuapp.com or http://localhost:7890) to .env
 export const fetchUserConvosByUserId = async (id) => {
   const res = await fetch(
     `https://vibn.herokuapp.com/api/v1/users/convos/${id}/convo`

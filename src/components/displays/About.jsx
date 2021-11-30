@@ -8,6 +8,7 @@ import elise from '../../assets/elise-img.jpg';
 import bri from '../../assets/bri-img.png';
 import sofia from '../../assets/sofia-img.png';
 
+// Each of the profiles here could be extracted into a smaller presentational component
 export default class About extends Component {
   render() {
     return (

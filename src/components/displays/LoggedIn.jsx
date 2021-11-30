@@ -15,11 +15,13 @@ export default function LoggedIn({ match }) {
   const { userObject } = useUsers();
 
   useEffect(() => {
+    // I'm guessing this is what you meant? Redirect the user after 9 seconds?
     setTimeout(() => {
-      history.push((`/user/${userObject.id}/dash`), 9000);
-      return () => spinner;
-    }, []);
-  });
+      history.push(`/user/${userObject.id}/dash`);
+    }, 9000);
+
+    return () => spinner;
+  }, []);
 
   return (
     <div className={styles.login_body}>

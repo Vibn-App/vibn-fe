@@ -37,8 +37,8 @@ export const fetchTopArtists = async (token) => {
   });
 
   const data = await res.json();
-  if (data.item === undefined) {
-    tokenRefresh(localStorage.getItem('REFRESH_TOKEN'));
+  if (!data.items?.length) {
+    await tokenRefresh(localStorage.getItem('REFRESH_TOKEN'));
   }
 
   return data.items;
