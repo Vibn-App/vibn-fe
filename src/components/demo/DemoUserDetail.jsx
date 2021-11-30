@@ -6,24 +6,6 @@ import msg from '../../assets/msg-user-icon.png';
 import DemoHeader from './DemoHeader';
 import { useParams, Link } from 'react-router-dom';
 import useDemoUsers from './useDemoUsers';
-// import demoUsers from './DemoUsers.js';
-
-// export const fetchDemoUserById = async () => {
-//   const res = await demoUsers.id;
-// console.log('poop', res);
-//   return res;
-// };
-// const [singleTask, setTask] = useState(initialTaskState);
-
-// const fetchSingTask = (id) => {
-//   axios.get(demoUsers, id).then((res) => {
-//     setTask(res.data);
-//   });
-// };
-
-// useEffect(() => {
-//   fetchSingTask(id);
-// }, [id]);
 
 const spinner =
   'https://64.media.tumblr.com/2e207597333f8528f39870b5b72e800c/tumblr_n8l3gq3Ygs1qza1qzo1_500.gifv';
@@ -34,8 +16,6 @@ export default function DemoUserDetail() {
 
   if (loading)
     return <img className={styles.spinner} src={spinner} alt="spinner" />;
-
-  console.log('----poop---', userObject);
 
   return (
     <div className={styles.profile_main}>
