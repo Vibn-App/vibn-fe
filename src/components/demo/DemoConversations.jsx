@@ -10,10 +10,10 @@ export default function Conversations() {
       <h1 className={styles.message_title}>Your Messages</h1>
       <main className={styles.main_container}>
         <Link to="/demo-convo/detail/demo1">
-          <h1>Sbeve</h1>
+          <h1>Gary Busey</h1>
         </Link>
         <Link to="/demo-convo/detail/demo2">
-          <h1>Jeep</h1>
+          <h1>Sbeve II</h1>
         </Link>
       </main>
     </div>

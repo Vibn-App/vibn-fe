@@ -59,7 +59,7 @@ body {
     padding-bottom: 100px;
 }
 
-.message_title {
+.message_title, .dood {
   font-size: 10vmin;
   font-family: 'Streamster', 'Permanent Marker', cursive;
   text-align: center;
